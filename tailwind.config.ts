@@ -14,18 +14,48 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
       },
     },
     extend: {
       colors: {
+        "primary-color": "#54428E",
+        "primary-blue": "#243c5a",
+        "primary-grey": "#5A5A5A",
+        "primary-green": "#95D403",
+        "primary-green-darker": "#8FCC03",
+        "nav-blue": "#262c55",
+        bgbody: "#F5F5F5",
+        bgLimit: "#989898",
+        brWhite: "#FFFFFF",
+        bgWhite: "#FCFCFC",
+        gray55: "#8C8C8C",
+        bgPrime: "#1E1E1E",
+        strokeCus: "#D7D7D7",
+        outlineCus: "#F5F5F5",
+        grayAsh: "#979797",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#54428E",
           foreground: "hsl(var(--primary-foreground))",
+          darker: "#392D62",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -40,7 +70,7 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "#FF4A47",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -51,6 +81,11 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        sans: ["sans-serif"],
+        inter: ["Inter"],
+        fugaz: ['"Fugaz One"'],
       },
       borderRadius: {
         lg: "var(--radius)",

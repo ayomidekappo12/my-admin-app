@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layouts/navbar";
+import Footer from "@/components/layouts/footer";
+import Layout from "@/app/sidebar/layout";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${inter.className} bg-bgbody`}>{children}</body>
+      <body className={`${inter.className}  bg-bgbody`}>
+        <Navbar />
+        <Layout>{children}</Layout>
+        <Toaster />
+        <Footer />
+      </body>
     </html>
   );
 }
